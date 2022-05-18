@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url(../fonts/Gotham\ Medium.otf);
+    src: url(../fonts/GothamMedium.ttf);
 }
 
 @font-face {
@@ -26,7 +26,7 @@ html{
 
 
 header{
-    background: url(../img/Layer\ 96.png) center center / cover;
+    background: url(../img/Layer\ 96.png) center top / cover;
     min-height: 100vh;
     width: 100%;
     
@@ -46,7 +46,64 @@ a{
     
 }
 
+.none{
+    display: none !important;
+}
 
+
+#navigation > .fa-bars{
+    color: white;
+    display: none;
+    font-size: 1.6rem;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.fa-xmark{
+    color: white;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#mobileNavArea{
+    overflow: hidden;
+    width: 100%;
+    height: 0px;
+    background:#d21242 ;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.2s ease 0s;
+    flex-direction: column;
+}
+.openNav{
+    height: 300px !important;
+}
+#mobileNavArea > ul > li {
+    list-style-type: none;
+    margin: 10px 0px;
+}
+#mobileNavArea > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-family: "Myriad";
+    
+}
+
+.iconesMobile{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    
+}
+
+.iconesMobile > i{
+    color: white;
+    font-size: 1.5em;
+    margin-right: 40px;
+}
 
 .logo{
     position: relative;
@@ -147,6 +204,18 @@ h1{
    
    
 }
+
+#scrollBtn{
+
+    transition: all 0.2s ease-in-out;
+
+}
+#scrollBtn:hover{
+
+    transform: rotate(-180deg);
+
+}
+
 .scroll > p{
     margin: 10px;
     font-family: "Open Sans";
@@ -161,6 +230,11 @@ h1{
 
 }
 
+.scroll > a:hover{
+    color: #d21242;
+    border: 1px #d21242 solid;
+}
+
 #agency{
     min-height: 100vh;
     background-color: #d21242;
@@ -171,7 +245,7 @@ h1{
 }
 
 .awesome{
-    position: relative;
+    
     width: 100%;
     color: white;
     font-family: "Gothamlight";
@@ -182,19 +256,29 @@ h1{
 }
 
 .awesome > .weAre{
-    
+    position: relative;
+    text-align: center;
     height: 50%;
     font-size: 4.5em;
+   
 }
 
-.awesome > .letreW{
+.awesome > .weAre::before{
+    content: "W";
+    
         position: absolute;
-        font-size: 20em;
+        font-size: 5.5em;
+        text-align: center;
+        width: 100%;
+        height: 100%;
         color: rgba(255, 255, 255, 0.315);
-        top: 40px;
+        top: -200px;
+        font-family: "Gotham";
         user-select: none;
-      
+
 }
+
+
 
 .features{
     width: 100%;
@@ -221,4 +305,136 @@ h1{
     width: 70%;
     text-align: center;
     
+}
+
+footer{
+    min-height: 10vh;
+    display: flex;
+    background-color: #222222;
+    color: white;
+    font-family: "Roboto";
+    align-items: center;
+    justify-content: center;
+}
+
+.footerText{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .awesome > .weAre::before{
+        top: -101px;
+        
+    }
+
+  
+    h1{
+        font-size: 5em;
+    }
+    #navigation{
+        width: 100%;
+        justify-content: space-between;
+        height: 100px;
+    }
+
+    #navigation > .fa-bars{
+        display: block;
+    }
+
+
+    .navMenu{
+        display: none;
+    }
+
+    .icones{
+        display: none;
+    }
+
+    .awesome > .weAre{
+        font-size: 2.5em;
+    }
+
+    .awesome > .letreW{
+        font-size: 15em;
+        top: 80px;
+    }
+    
+    .features{
+        flex-wrap: wrap;
+    }
+    .boxFeatures{
+        width: 35%;
+        margin-bottom: 50px;
+    }
+
+    .boxFeatures > i{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .awesome > .weAre::before{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+    .awesome > .weAre::before{
+        Top: -65px;
+        width: 100%;
+    }
+    h1{
+        font-size: 3em;
+    }
+    .awesome > .weAre{
+        font-size: 1.5em;
+    }
+    .awesome > .letreW{
+        font-size: 10em;
+        top: 130px;
+    }
+
+    .boxFeatures{
+        font-size: 14px;
+        margin: 20px;
+    }
+
+    .iconesMobile > i{
+       
+        font-size: 1em;
+        margin-right: 15px;
+       
+    }
+
+    .footerText{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .awesome > .weAre::before{
+        top: -60px;
+       ;
+    }
+    .features{
+        flex-direction: column;
+    }
+    
+    .boxFeatures{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 375px){
+.awesome > .weAre::before {
+    top: -60px;
+    width: 80%;
+}
 }
