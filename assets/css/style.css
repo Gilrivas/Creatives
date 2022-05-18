@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap');
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(../fonts/Gotham\ Medium.otf);
+}
+
+@font-face {
+    font-family: 'Gothamlight';
+    src: url(../fonts/GothamLight.ttf);
+}
+
+@font-face {
+    font-family: 'Myriad';
+    src: url(../fonts/MYRIADPRO-REGULAR.OTF);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+header{
+    background: url(../img/Layer\ 96.png) center center / cover;
+    min-height: 100vh;
+    width: 100%;
+    
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+#navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid #ffffff40 1px;
+    
+}
+
+
+
+.logo{
+    position: relative;
+    color: white;
+    width: 20%;
+    display: flex;
+    font-family: "Roboto";
+    justify-content: center;
+}
+
+.logo > p{
+
+    background-color:#d21242;
+    padding: 15px 10px;
+    z-index: 5;
+    font-size: 1.4em;
+    font-weight: 500;
+    box-shadow: 10px 5px 0px  white ;
+    user-select: none;
+}
+
+
+.navMenu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 60%;
+}
+
+.navMenu > li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    height: 100%;
+    width: 10%; 
+}
+
+
+.navMenu > li > a{
+    color: white;
+    font-family: 'Myriad';
+}
+
+.navMenu > li:hover{
+    border-bottom: 3px solid #d21242;
+}
+
+.icones{
+    color: white;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+h1{
+    color: white;
+    font-size: 7em;
+    font-family: "Gothamlight", sans-serif;
+    font-weight: 500;
+}
+
+.icones > i{
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.icones > i:hover{
+    color: #d21242;
+}
+
+.boxHeader{
+    display: flex;
+    height: calc(100vh - 100px);
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.headerTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+
+}
+
+.scroll{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+   
+}
+.scroll > p{
+    margin: 10px;
+    font-family: "Open Sans";
+}
+
+.scroll > a{
+    border: 1px solid white;
+    padding: 9px 12px;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+
+}
+
+#agency{
+    min-height: 100vh;
+    background-color: #d21242;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.awesome{
+    position: relative;
+    width: 100%;
+    color: white;
+    font-family: "Gothamlight";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.awesome > .weAre{
+    
+    height: 50%;
+    font-size: 4.5em;
+}
+
+.awesome > .letreW{
+        position: absolute;
+        font-size: 20em;
+        color: rgba(255, 255, 255, 0.315);
+        top: 40px;
+        user-select: none;
+      
+}
+
+.features{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxFeatures{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-family: "Gothamlight";
+    font-weight: 100;
+}
+.boxFeatures > i{
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+.boxFeatures > p{
+    width: 70%;
+    text-align: center;
+    
+}
