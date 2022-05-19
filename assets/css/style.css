@@ -332,6 +332,7 @@ h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 100px;
 }
 
 .awesome{
@@ -401,6 +402,7 @@ h1{
 
 #section1{
     min-height: 100vh;
+    margin-bottom: 100px;
 }
 
 #premierepartie {
@@ -599,6 +601,11 @@ footer{
 
 
 @media screen and (max-width: 1024px) { 
+
+        #section1{
+            margin-bottom: 20px;
+        }
+
         .text1{ 
             font-size: 1em;
         }
