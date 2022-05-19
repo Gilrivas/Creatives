@@ -541,9 +541,18 @@ width: 100%;
 .boxSummer > img{
     width: 100%;
     height: 350px;
-    cursor: pointer;
 
 }
+    /* Rotation des photos */
+  .boxSummer img {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+   .boxSummer:hover img {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  
 
 
 .bloc3{
@@ -582,6 +591,18 @@ width: 100%;
     width: 100px;
     height: 100px;
 }
+/* image clignotte*/
+.txtSection3 > img{
+    animation-duration: 2s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+ }
+ @keyframes clignoter {
+   0%   { opacity:1; }
+   40%   {opacity:0; }
+   100% { opacity:1; }
+ }
 
 footer{
     min-height: 10vh;
@@ -707,12 +728,13 @@ footer{
        }
        .txtSection3 > p{
            font-size:15px ;
+           margin: 5%;
        }
        .txtSection3{
-           margin: 0%;
+           margin: 2%;
        }
        .txtSection3 > img{
-           margin: 3px;
+           margin: 30px;
            width: 8%;
        }
 
@@ -783,6 +805,18 @@ footer{
         .txtSection3 > img{
             margin: 5px;
         }
+                /* Image ronde */
+        .boxSummer > img {
+             width: 200px; /* largeur de l'image */
+             height: auto; /* hauteur de l'image */
+             -webkit-transition: .3s ease-in-out !important; 
+             transition: .3s ease-in-out !important; 
+                         }
+        .boxSummer:hover img:hover {
+             width: 150px; /* on affiche l'image au carré */
+             height: 150px;
+             border-radius: 50%; 
+                                   }
 
 }
 
@@ -829,6 +863,18 @@ footer{
                 width: 140%;
                 height: 100%;
             }
+                       /* Image ronde */
+            .boxSummer > img {
+                width: 200px; /* largeur de l'image */
+                height: auto; /* hauteur de l'image */
+                -webkit-transition: .3s ease-in-out !important; 
+                transition: .3s ease-in-out !important; 
+                            }
+            .boxSummer:hover img:hover {
+                width: 150px; /* on affiche l'image au carré */
+                height: 150px;
+                border-radius: 50%; 
+                }
             .txtSection3 > .basdepage > p{
                 font-size: 0.8em;
                 width: 50%;
@@ -857,7 +903,7 @@ footer{
                 height: 30%;
                 
             }
-           
+
 
                  
 }
