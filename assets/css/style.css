@@ -214,7 +214,7 @@ a{
     
 }
 
-a:after {    
+.navMenu > li > a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -226,7 +226,7 @@ a:after {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
-  a:hover:after { 
+  .navMenu > li > a:hover:after { 
     width: 100%; 
     left: 0; 
   }
@@ -332,6 +332,7 @@ h1{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 100px;
 }
 
 .awesome{
@@ -401,6 +402,7 @@ h1{
 
 #section1{
     min-height: 100vh;
+    margin-bottom: 100px;
 }
 
 #premierepartie {
@@ -539,6 +541,7 @@ width: 100%;
 .boxSummer > img{
     width: 100%;
     height: 350px;
+
 }
     /* Rotation des photos */
   .boxSummer img {
@@ -550,6 +553,7 @@ width: 100%;
     transform: rotate(-15deg);
   }
   
+
 
 .bloc3{
     font-family: "Gothamlight";
@@ -618,6 +622,11 @@ footer{
 
 
 @media screen and (max-width: 1024px) { 
+
+        #section1{
+            margin-bottom: 20px;
+        }
+
         .text1{ 
             font-size: 1em;
         }

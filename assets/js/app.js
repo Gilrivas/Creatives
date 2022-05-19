@@ -2,6 +2,18 @@ var burger = document.getElementById('burger');
 var closeNav = document.getElementById('closeNav');
 var mobileNavArea = document.getElementById('mobileNavArea');
 
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+    document.getElementById("navigation").style.cssText = 
+    "background: #191919e0; back-drop-filter: blur(7px);";
+  } else {
+    document.getElementById("navigation").style.background = "none";
+  }
+}
+
 burger.addEventListener('click', function(){
     mobileNavArea.classList.remove('none');
 
@@ -25,3 +37,4 @@ closeNav.addEventListener('click', function(){
     burger.classList.remove('none');
     
 })
+
