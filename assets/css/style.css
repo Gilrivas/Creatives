@@ -11,6 +11,11 @@
 }
 
 @font-face {
+    font-family: 'GothamBold';
+    src: url(../fonts/GothamBold.otf);
+}
+
+@font-face {
     font-family: 'Myriad';
     src: url(../fonts/MYRIADPRO-REGULAR.OTF);
 }
@@ -18,6 +23,39 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+@keyframes shine {
+    from { -webkit-mask-position: 150%; }
+    to { -webkit-mask-position: -50%; }
+  }
 
 html{
     scroll-behavior: smooth;
@@ -43,7 +81,10 @@ a{
     align-items: center;
     justify-content: center;
     border-bottom: solid #ffffff40 1px;
-    
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+
 }
 
 .none{
@@ -61,8 +102,8 @@ a{
 
 .fa-xmark{
     color: white;
-    font-size: 1.4rem;
-    margin-right: 10px;
+    font-size: 1.6rem;
+    margin-right: 30px;
     cursor: pointer;
 }
 
@@ -77,6 +118,10 @@ a{
     align-items: flex-start;
     transition: all 0.2s ease 0s;
     flex-direction: column;
+    z-index: 6;
+    position: fixed;
+    top: 100px;
+    box-shadow: 0px 20px 20px -15px #111;   
 }
 .openNav{
     height: 300px !important;
@@ -89,6 +134,7 @@ a{
     text-decoration: none;
     color: white;
     font-family: "Myriad";
+    filter: drop-shadow(0px 2px 3px #111)
     
 }
 
@@ -103,6 +149,8 @@ a{
     color: white;
     font-size: 1.5em;
     margin-right: 40px;
+    filter: drop-shadow(0px 2px 3px #111)
+    
 }
 
 .logo{
@@ -112,6 +160,7 @@ a{
     display: flex;
     font-family: "Roboto";
     justify-content: center;
+    
 }
 
 .logo > p{
@@ -123,6 +172,7 @@ a{
     font-weight: 500;
     box-shadow: 10px 5px 0px  white ;
     user-select: none;
+    filter: drop-shadow(1px 1px 3px #111)
 }
 
 
@@ -133,45 +183,78 @@ a{
     justify-content: center;
     height: 100px;
     width: 60%;
+    padding: 0;
 }
 
 .navMenu > li{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0px 10px;
     height: 100%;
-    width: 10%; 
+    width: 12%; 
+    transition: all 0.3s ease-in;
 }
 
 
 .navMenu > li > a{
     color: white;
     font-family: 'Myriad';
+    letter-spacing: 0.10em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    filter: drop-shadow(0px 2px 1px #111);
+    height: 100%;
+   
+    
 }
 
-.navMenu > li:hover{
-    border-bottom: 3px solid #d21242;
-}
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background:#d21242;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
 
 .icones{
     color: white;
     width: 20%;
+    font-size: 1.3em;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    filter: drop-shadow(0px 2px 1px #111)
+    
 }
 
 h1{
     color: white;
     font-size: 7em;
-    font-family: "Gothamlight", sans-serif;
-    font-weight: 500;
+    font-family: "Gothamlight";
+    font-weight: bold;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 3s linear infinite;
+    
 }
 
 .icones > i{
     margin: 10px;
     cursor: pointer;
     font-size: 1em;
+    transition: all 0.2s ease-in-out;
 }
 
 .icones > i:hover{
@@ -180,7 +263,7 @@ h1{
 
 .boxHeader{
     display: flex;
-    height: calc(100vh - 100px);
+    height: 100vh;
     justify-content: center;
     width: 100%;
     flex-direction: column;
@@ -217,20 +300,24 @@ h1{
 }
 
 .scroll > p{
-    margin: 10px;
+    margin: 10px 0px;
     font-family: "Open Sans";
+    font-size: 0.9em;
 }
 
 .scroll > a{
-    border: 1px solid white;
-    padding: 9px 12px;
     color: white;
-    border-radius: 100%;
     cursor: pointer;
-
 }
 
-.scroll > a:hover{
+.scroll > a > i{
+    border: 1px solid white;
+    padding: 18px 23px;
+    font-size: 1.5em;
+    border-radius: 100%;
+}
+
+.scroll > a >i:hover{
     color: #d21242;
     border: 1px #d21242 solid;
 }
@@ -271,6 +358,7 @@ h1{
         text-align: center;
         width: 100%;
         height: 100%;
+        left: 0;
         color: rgba(255, 255, 255, 0.315);
         top: -200px;
         font-family: "Gotham";
@@ -300,6 +388,7 @@ h1{
 .boxFeatures > i{
     font-size: 3em;
     margin-bottom: 30px;
+    animation: heartbeat 2.2s infinite;
 }
 .boxFeatures > p{
     width: 70%;
@@ -328,6 +417,7 @@ footer{
 
     .awesome > .weAre::before{
         top: -101px;
+    
         
     }
 
@@ -376,12 +466,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 666px) {
-    .awesome > .weAre::before{
-        width: 80%;
-    }
-    
-}
+
 
 @media screen and (max-width: 600px) {
     
@@ -414,6 +499,12 @@ footer{
 
     .footerText{
         font-size: 0.8em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerText > p{
+        margin: 3px;
     }
 }
 
@@ -430,11 +521,24 @@ footer{
     .boxFeatures{
         width: 80%;
     }
+
+    .logo{
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .awesome > .weAre::before{
+        top: -60px;
+    
+       ;
+    }
 }
 
 @media screen and (max-width: 375px){
 .awesome > .weAre::before {
     top: -60px;
-    width: 80%;
+
 }
 }
