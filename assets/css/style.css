@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap');
 
 @font-face {
-    font-family: 'Gotham'
+    font-family: 'Gotham';
     src: url(../fonts/GothamMedium.ttf);
 }
 
@@ -214,7 +214,7 @@ a{
     
 }
 
-a:after {    
+.navMenu > li > a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -226,7 +226,7 @@ a:after {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
-  a:hover:after { 
+  .navMenu > li > a:hover:after { 
     width: 100%; 
     left: 0; 
   }
@@ -539,8 +539,11 @@ width: 100%;
 .boxSummer > img{
     width: 100%;
     height: 350px;
+    cursor: pointer;
 
 }
+
+
 .bloc3{
     font-family: "Gothamlight";
     font-size: 2em;
