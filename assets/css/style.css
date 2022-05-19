@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap');
 
 @font-face {
-    font-family: 'Gotham';
+    font-family: 'Gotham'
     src: url(../fonts/GothamMedium.ttf);
 }
 
@@ -10,7 +10,8 @@
     src: url(../fonts/GothamLight.ttf);
 }
 
-@font-face {
+
+@font-face{
     font-family: 'GothamBold';
     src: url(../fonts/GothamBold.otf);
 }
@@ -19,10 +20,12 @@
     font-family: 'Myriad';
     src: url(../fonts/MYRIADPRO-REGULAR.OTF);
 }
+
 *{
     box-sizing: border-box;
     margin: 0;
 }
+
 
 @keyframes heartbeat
 {
@@ -396,6 +399,185 @@ h1{
     
 }
 
+#section1{
+    min-height: 100vh;
+}
+
+#premierepartie {
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+}
+
+.text1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: #191919;
+    width: 50%;
+    font-family: "Gothamlight" ;
+    padding: 50px;
+    line-height: 0.7cm;
+    font-size: 1em;
+}
+
+.text1 > h2{
+    margin: 20px 0px;
+}
+
+.text2 > h2{
+    margin: 20px 0px;
+}
+.textSolo{
+    margin: 20px 0px;
+}
+
+.photo1{
+    width: 50%;
+}
+
+.photo1 > img {
+    width: 100%;
+}
+
+#deuxiemepartie {
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+}
+.text2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    background-color: #f3f3f3;
+    width: 50%;
+    font-family: "Gothamlight" ;
+    padding: 50px;
+    line-height: 0.7cm;
+    font-size: 1em;
+}
+.photo2{
+    width: 50%;   
+}
+.photo2 > img {
+width: 100%;
+}
+#section2{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    
+}
+.txt1 {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    min-height: 40vh;
+
+}
+.bloc1{
+    
+    font-family:"Roboto";
+    font-weight: 500;
+    font-size: 3em;
+}
+.bloc2{
+    position: absolute;
+    font-family:"Gotham" ;
+    font-size: 20em;
+    color: #d21242cb;;
+    top: 5;
+    z-index: -1;
+
+}
+
+
+.summer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxSummer{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.boxSummer > h3{
+    text-align: center;
+    color: #d21242;
+    font-family: "Gothamlight";
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.boxSummer > p{
+    width: 90%;
+    text-align: center;
+    font-family: "Gothamlight";
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 7mm;
+
+}
+.boxSummer > img{
+    width: 100%;
+    height: 350px;
+
+}
+.bloc3{
+    font-family: "Gothamlight";
+    font-size: 2em;
+    margin-bottom: 70px;
+}
+
+#section3{
+    background-color: #d21242;
+    min-height: 50vh;
+    
+}
+.txtSection3 {
+    display: flex;
+    color: white;
+    text-align: justify;
+    font-family: "Gothamlight";
+    font-size: 11px;
+    line-height: 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+
+}
+#basdepage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+.txtSection3 > p {
+    margin: 50px;
+}
+.txtSection3 > img{
+    width: 100px;
+    height: 100px;
+}
+
 footer{
     min-height: 10vh;
     display: flex;
@@ -412,6 +594,263 @@ footer{
     justify-content: space-between;
 }
 
+
+@media screen and (max-width: 1024px) { 
+        .text1{ 
+            font-size: 1em;
+        }
+        .photo1{
+            width: 50%;
+            height: auto;
+        }
+        .photo2{
+            width: 50%;
+            height: auto ;  
+        }
+        .text2{
+            font-size: 1em;
+        }
+    
+        
+        .bloc2{
+            font-size: 11em;
+        }
+        .bloc1{
+            font-size: 2.5em;
+        }
+        .bloc3  {
+            font-size: 1.2em;
+        }
+        .summer {
+            flex-wrap: wrap;
+        }
+        .summer > .boxSummer{
+            width: 35%;
+            margin: 15px;
+        }
+        .boxSummer > img{
+            width: 100%;
+            height: 100%;
+        }
+        .boxSummer > p{
+            font-size: 0.9em;
+            width: 100%;
+            line-height: 5mm;
+       }
+        .txtSection3 > img{
+            width: 70px;
+            height: 70%;
+       }
+
+
+        .basdepage > img{
+            width: 50%;  
+            margin-bottom: 70%;
+
+        }
+        
+        .txtSection3{
+            font-size: 0.8em;
+            flex-direction: column;
+            height: 50%;
+        }
+        .txtSection3 > img {
+            width: 15%;
+            height: 30%;
+        }
+        .txtSection3 > p{
+            font-size: 100%;
+            margin-top: 5%;
+        }
+       
+}  
+
+    @media screen and (max-width: 768px){
+
+        #premierepartie{
+            flex-direction: column;
+        }
+        #deuxiemepartie{
+            flex-direction: column-reverse;
+        }
+            .text1{
+                font-size: 0.8em;
+                width: 100%;
+            }
+            .photo1{
+                width: 100%;
+                height: auto;
+            }
+            .text2{
+                font-size: 0.8em;
+                width: 100%;
+            }
+            .photo2{
+                width: 100%;
+                height: auto;
+                
+            }
+
+        #basdepage{
+           flex-direction: column;
+           margin: 0%;
+       }
+       .txtSection3 > p{
+           font-size:15px ;
+       }
+       .txtSection3{
+           margin: 0%;
+       }
+       .txtSection3 > img{
+           margin: 3px;
+           width: 8%;
+       }
+
+
+    }
+
+@media screen and (max-width: 425px){
+
+        #premierepartie{
+            flex-direction: column;
+        }
+        .text1{ 
+            font-size: 0.8em;
+            width: 100%;
+        
+        }
+        .photo1{
+            width: 100%;
+            height: 100%;
+        }
+        .photo2{
+            width: 100%;
+            height: 100% ;  
+        }
+
+        #deuxiemepartie{
+            flex-direction: column-reverse;
+        }
+        .text2{
+            font-size: 1em;
+            width: 100%;
+        }
+        .premierepartie{
+            width: 3%;
+        }
+        .txtSection3 > p {
+            font-size: 0.9em;
+            line-height: 11px;
+            font-size: 70%;     
+        }
+        .txtSection3 > img {
+            width: 10%;
+            height: 10%;  
+        }
+        .bloc1{
+            font-size: 1.5em;
+        }
+        .bloc2{
+            font-size: 8em;
+        }
+        .bloc3{
+            font-size: 0.9em;
+        }
+        .summer{
+            flex-direction: column;
+        }
+        .summer > .boxSummer {
+            width: 70%;
+        }
+        .boxSummer > p {
+            text-align: justify;
+        }
+        
+        .txtSection3 > p{
+            font-size: 13px;
+            line-height: 17px;
+        }
+        .txtSection3 > img{
+            margin: 5px;
+        }
+
+}
+
+@media screen and (max-width: 375px){
+
+    .bloc3 > h3 {
+        font-size: 1.1em;
+        font-weight: bolder;
+    }
+}
+
+
+@media screen and (max-width: 320px){
+    
+            .bloc3 > h3 {
+                font-size: 0.9em;
+                font-weight: bolder;
+            }
+            .text1{ 
+                font-size: 0.7em;
+                width: 100%;
+            }
+            .text2{
+                font-size: 0.7em;
+                width: 100%;
+            }
+            .photo1{
+                width: 100%;
+                height: 100%;
+            }
+            .photo2{
+                width: 100%;
+                height: 100% ;  
+            }
+            .txt1{
+                min-height: 17vh;
+            }
+            .boxSummer > p{
+                font-size: 0.8em;
+                width: 100%;
+                text-align: justify;
+            }
+            .boxSummer > img{
+                width: 140%;
+                height: 100%;
+            }
+            .txtSection3 > .basdepage > p{
+                font-size: 0.8em;
+                width: 50%;
+                height: 50%;
+                
+            }
+            #basdepage{
+               flex-direction: column;
+               text-align: center;
+               margin: 0%;
+            }
+
+            .txtSection3{
+                margin: 2%;
+                flex-direction: column;
+                width: 100%;
+            }
+            .txtSection3 > p{
+                margin: 0;
+                width: 90%;
+                text-align: justify;
+            }
+            .txtSection3 > img {
+                margin: 2%;
+                width: 16%;
+                height: 30%;
+                
+            }
+           
+
+                 
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -542,3 +981,4 @@ footer{
 
 }
 }
+
