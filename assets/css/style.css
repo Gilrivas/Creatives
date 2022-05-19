@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap');
 
 @font-face {
-    font-family: 'Gotham';
-    src: url(../fonts/Gotham\ Medium.otf);
+    font-family: 'Gotham'
+    src: url(../fonts/GothamMedium.ttf);
 }
 
 @font-face {
     font-family: 'Gothamlight';
     src: url(../fonts/GothamLight.ttf);
+}
+
+
+@font-face{
+    font-family: 'GothamBold';
+    src: url(../fonts/GothamBold.otf);
 }
 
 @font-face {
@@ -18,6 +24,379 @@
 *{
     box-sizing: border-box;
     margin: 0;
+}
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+@keyframes shine {
+    from { -webkit-mask-position: 150%; }
+    to { -webkit-mask-position: -50%; }
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+header{
+    background: url(../img/Layer\ 96.png) center top / cover;
+    min-height: 100vh;
+    width: 100%;
+    
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+#navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid #ffffff40 1px;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+
+}
+
+.none{
+    display: none !important;
+}
+
+
+#navigation > .fa-bars{
+    color: white;
+    display: none;
+    font-size: 1.6rem;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.fa-xmark{
+    color: white;
+    font-size: 1.6rem;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+#mobileNavArea{
+    overflow: hidden;
+    width: 100%;
+    height: 0px;
+    background:#d21242 ;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.2s ease 0s;
+    flex-direction: column;
+    z-index: 6;
+    position: fixed;
+    top: 100px;
+    box-shadow: 0px 20px 20px -15px #111;   
+}
+.openNav{
+    height: 300px !important;
+}
+#mobileNavArea > ul > li {
+    list-style-type: none;
+    margin: 10px 0px;
+}
+#mobileNavArea > ul > li > a {
+    text-decoration: none;
+    color: white;
+    font-family: "Myriad";
+    filter: drop-shadow(0px 2px 3px #111)
+    
+}
+
+.iconesMobile{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    
+}
+
+.iconesMobile > i{
+    color: white;
+    font-size: 1.5em;
+    margin-right: 40px;
+    filter: drop-shadow(0px 2px 3px #111)
+    
+}
+
+.logo{
+    position: relative;
+    color: white;
+    width: 20%;
+    display: flex;
+    font-family: "Roboto";
+    justify-content: center;
+    
+}
+
+.logo > p{
+
+    background-color:#d21242;
+    padding: 15px 10px;
+    z-index: 5;
+    font-size: 1.4em;
+    font-weight: 500;
+    box-shadow: 10px 5px 0px  white ;
+    user-select: none;
+    filter: drop-shadow(1px 1px 3px #111)
+}
+
+
+.navMenu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 60%;
+    padding: 0;
+}
+
+.navMenu > li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    height: 100%;
+    width: 12%; 
+    transition: all 0.3s ease-in;
+}
+
+
+.navMenu > li > a{
+    color: white;
+    font-family: 'Myriad';
+    letter-spacing: 0.10em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    filter: drop-shadow(0px 2px 1px #111);
+    height: 100%;
+   
+    
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background:#d21242;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+.icones{
+    color: white;
+    width: 20%;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 2px 1px #111)
+    
+}
+
+h1{
+    color: white;
+    font-size: 7em;
+    font-family: "Gothamlight";
+    font-weight: bold;
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 3s linear infinite;
+    
+}
+
+.icones > i{
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s ease-in-out;
+}
+
+.icones > i:hover{
+    color: #d21242;
+}
+
+.boxHeader{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.headerTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+
+}
+
+.scroll{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+   
+}
+
+#scrollBtn{
+
+    transition: all 0.2s ease-in-out;
+
+}
+#scrollBtn:hover{
+
+    transform: rotate(-180deg);
+
+}
+
+.scroll > p{
+    margin: 10px 0px;
+    font-family: "Open Sans";
+    font-size: 0.9em;
+}
+
+.scroll > a{
+    color: white;
+    cursor: pointer;
+}
+
+.scroll > a > i{
+    border: 1px solid white;
+    padding: 18px 23px;
+    font-size: 1.5em;
+    border-radius: 100%;
+}
+
+.scroll > a >i:hover{
+    color: #d21242;
+    border: 1px #d21242 solid;
+}
+
+#agency{
+    min-height: 100vh;
+    background-color: #d21242;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.awesome{
+    
+    width: 100%;
+    color: white;
+    font-family: "Gothamlight";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.awesome > .weAre{
+    position: relative;
+    text-align: center;
+    height: 50%;
+    font-size: 4.5em;
+   
+}
+
+.awesome > .weAre::before{
+    content: "W";
+    
+        position: absolute;
+        font-size: 5.5em;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        color: rgba(255, 255, 255, 0.315);
+        top: -200px;
+        font-family: "Gotham";
+        user-select: none;
+
+}
+
+
+
+.features{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxFeatures{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    font-family: "Gothamlight";
+    font-weight: 100;
+}
+.boxFeatures > i{
+    font-size: 3em;
+    margin-bottom: 30px;
+    animation: heartbeat 2.2s infinite;
+}
+.boxFeatures > p{
+    width: 70%;
+    text-align: center;
+    
 }
 
 #section1{
@@ -198,6 +577,24 @@ width: 100%;
     width: 100px;
     height: 100px;
 }
+
+footer{
+    min-height: 10vh;
+    display: flex;
+    background-color: #222222;
+    color: white;
+    font-family: "Roboto";
+    align-items: center;
+    justify-content: center;
+}
+
+.footerText{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+
 @media screen and (max-width: 1024px) { 
         .text1{ 
             font-size: 1em;
@@ -454,3 +851,134 @@ width: 100%;
 
                  
 }
+
+@media screen and (max-width: 1024px) {
+
+    .awesome > .weAre::before{
+        top: -101px;
+    
+        
+    }
+
+  
+    h1{
+        font-size: 5em;
+    }
+    #navigation{
+        width: 100%;
+        justify-content: space-between;
+        height: 100px;
+    }
+
+    #navigation > .fa-bars{
+        display: block;
+    }
+
+
+    .navMenu{
+        display: none;
+    }
+
+    .icones{
+        display: none;
+    }
+
+    .awesome > .weAre{
+        font-size: 2.5em;
+    }
+
+    .awesome > .letreW{
+        font-size: 15em;
+        top: 80px;
+    }
+    
+    .features{
+        flex-wrap: wrap;
+    }
+    .boxFeatures{
+        width: 35%;
+        margin-bottom: 50px;
+    }
+
+    .boxFeatures > i{
+        margin-bottom: 15px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    
+    .awesome > .weAre::before{
+        Top: -65px;
+        width: 100%;
+    }
+    h1{
+        font-size: 3em;
+    }
+    .awesome > .weAre{
+        font-size: 1.5em;
+    }
+    .awesome > .letreW{
+        font-size: 10em;
+        top: 130px;
+    }
+
+    .boxFeatures{
+        font-size: 14px;
+        margin: 20px;
+    }
+
+    .iconesMobile > i{
+       
+        font-size: 1em;
+        margin-right: 15px;
+       
+    }
+
+    .footerText{
+        font-size: 0.8em;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerText > p{
+        margin: 3px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .awesome > .weAre::before{
+        top: -60px;
+       ;
+    }
+    .features{
+        flex-direction: column;
+    }
+    
+    .boxFeatures{
+        width: 80%;
+    }
+
+    .logo{
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .awesome > .weAre::before{
+        top: -60px;
+    
+       ;
+    }
+}
+
+@media screen and (max-width: 375px){
+.awesome > .weAre::before {
+    top: -60px;
+
+}
+}
+
