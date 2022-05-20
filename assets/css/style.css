@@ -568,6 +568,8 @@ width: 100%;
     font-family: "Gothamlight";
     font-size: 2em;
     margin-bottom: 70px;
+    text-align: center;
+    width: 100%;
 }
 
 #section3{
@@ -580,7 +582,7 @@ width: 100%;
     color: white;
     text-align: justify;
     font-family: "Gothamlight";
-    font-size: 11px;
+    font-size: 16px;
     line-height: 24px;
     justify-content: center;
     align-items: center;
@@ -592,6 +594,7 @@ width: 100%;
     justify-content: center;
     align-items: center;
     min-height: 50vh;
+    padding: 50px;
 }
 .txtSection3 > p {
     margin: 50px;
@@ -629,6 +632,10 @@ footer{
     justify-content: space-between;
 }
 
+.footerText > p > span{
+    color: #d21242;
+    font-weight: 600;
+}
 
 @media screen and (max-width: 1024px) { 
 
@@ -813,21 +820,26 @@ footer{
         }
         .txtSection3 > img{
             margin: 5px;
-        }
+}
                 /* Image ronde */
         .boxSummer > img {
              width: 200px; /* largeur de l'image */
              height: auto; /* hauteur de l'image */
              -webkit-transition: .3s ease-in-out !important; 
              transition: .3s ease-in-out !important; 
-                         }
+}
         .boxSummer:hover img:hover {
              width: 150px; /* on affiche l'image au carré */
              height: 150px;
              border-radius: 50%; 
-                                   }
+}
+
+
+                                
 
 }
+
+
 
 @media screen and (max-width: 375px){
 
@@ -1008,8 +1020,18 @@ footer{
         align-items: center;
     }
     .footerText > p{
-        margin: 3px;
+        margin: 12px;
     }
+
+
+    footer{
+        min-height: 20vh;
+    }
+    .awesome{
+        min-height: 30vh;
+    }
+
+    
 }
 
 @media screen and (max-width: 425px) {
@@ -1029,16 +1051,16 @@ footer{
     .logo{
         margin-left: 12px;
     }
-}
-
-@media screen and (max-width: 425px) {
 
     .awesome > .weAre::before{
         top: -60px;
     
        ;
     }
+
+    
 }
+
 
 @media screen and (max-width: 375px){
 .awesome > .weAre::before {
