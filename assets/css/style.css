@@ -60,6 +60,34 @@
     to { -webkit-mask-position: -50%; }
   }
 
+
+@keyframes hide {
+  from{
+      z-index:2;
+transform: scale(1);
+    opacity:1;
+  } to{
+      z-index:-1;
+transform: scale(0);
+    opacity: 0;
+  }
+}
+
+
+@keyframes show {
+  from{
+    
+transform: scale(0);
+    opacity:0;
+      z-index:-1;
+  } to{
+    
+transform: scale(1);
+    opacity: 1;
+      z-index:2;
+  }
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -495,7 +523,7 @@ width: 100%;
     position: absolute;
     font-family:"Gotham" ;
     font-size: 20em;
-    color: #d21242cb;;
+    color: #d2124285;
     top: 5;
     z-index: -1;
 
@@ -548,7 +576,7 @@ width: 100%;
 }
     /* Rotation des photos */
   .boxSummer img {
-    transition: all 0.5s ease;
+    transition: all 0.9s ease;
     width: 100%;
 }
   
@@ -561,8 +589,69 @@ width: 100%;
     overflow: hidden ;
     margin: 0px 20px;
 }
-  
 
+
+#modal01{
+    width:350px;
+    height:70vh;
+    top: calc(50% - 300px);
+    background: #fff;
+    border-radius:5%;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    filter: drop-shadow( 1px 1px 3px rgba(17, 17, 17, 0.664));
+   
+}
+
+#topclose{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding: 30px;
+
+}
+
+
+.boxModalSummer{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+.boxModalSummer > p, h3{
+    font-family: "Gothamlight";
+    margin: 20px;
+}
+
+.boxModalSummer > h3{
+    color: #d21242;
+    filter: drop-shadow( 1px 1px 1px rgba(17, 17, 17, 0.664));
+}
+
+.boxModalSummer > img{
+    width: 200px;
+    height: 200px;
+}
+
+.modalX{
+    font-size: 1.5em;
+    
+    color: black;
+}
+
+
+
+.showModal{
+    display: flex !important;
+    z-index:2;
+    animation: show .5s;
+    transform: scale(1);
+}
+
+ 
 
 .bloc3{
     font-family: "Gothamlight";
@@ -1029,6 +1118,11 @@ footer{
     }
     .awesome{
         min-height: 30vh;
+    }
+
+    #modal01{
+        position: fixed;
+        width: 300px;
     }
 
     

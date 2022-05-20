@@ -38,3 +38,17 @@ closeNav.addEventListener('click', function(){
     
 })
 
+
+function openModal(element){
+  let modal= document.querySelector('#modal01');
+  modal.classList.add("showModal");
+  document.getElementById("img01").src = element.src;
+  
+}
+
+function closeM(){
+
+    let m= document.querySelector('#modal01');
+  m.classList.remove("showModal");
+  
+}
