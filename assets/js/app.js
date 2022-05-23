@@ -54,24 +54,32 @@ function closeM(){
 }
 
 
-var navInfo = window.navigator.platform.toLowerCase();
-var so = 'Sistema Operativo';
-function retornarSO()
-{
-	if(navInfo.indexOf('win') != -1)
-	{
-    document.getElementById('titleHeader').classList.add('titleEfect')
-		so = 'Windows';
-	}
-	else if(navInfo.indexOf('linux') != -1)
-	{
-		document.getElementById('titleHeader').classList.remove('titleEfect')
-	}
-	else if(navInfo.indexOf('mac') != -1)
-	{
-		document.getElementById('titleHeader').classList.remove('titleEfect')
-	}
-	return so
-}
 
-console.log(retornarSO());
+function detectSytem(){
+
+  var OS="Unknown";
+  
+  if (navigator.userAgent.indexOf("Win")!=-1){
+    OS="Windows";
+    document.getElementById('titleHeader').classList.add('titleEfect');
+  } 
+  
+  if (navigator.userAgent.indexOf("Mac")!=-1) OS="MacOS";
+  
+  if (navigator.userAgent.indexOf("X11")!=-1) OS="UNIX";
+  
+  if (navigator.userAgent.indexOf("Linux")!=-1) OS="Linux";
+  
+  if (navigator.userAgent.indexOf("iPhone")!=-1) OS="Iphone";
+  
+  if (navigator.userAgent.indexOf("iPad")!=-1) OS="Ipad";
+  
+  if (navigator.userAgent.indexOf("Android")!=-1) OS="Android";
+  
+  
+  
+  return OS;
+  
+  }
+
+  console.log( detectSytem());
