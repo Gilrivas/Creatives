@@ -52,3 +52,26 @@ function closeM(){
   m.classList.remove("showModal");
   
 }
+
+
+var navInfo = window.navigator.platform.toLowerCase();
+var so = 'Sistema Operativo';
+function retornarSO()
+{
+	if(navInfo.indexOf('win') != -1)
+	{
+    document.getElementById('titleHeader').classList.add('titleEfect')
+		so = 'Windows';
+	}
+	else if(navInfo.indexOf('linux') != -1)
+	{
+		document.getElementById('titleHeader').classList.remove('titleEfect')
+	}
+	else if(navInfo.indexOf('mac') != -1)
+	{
+		document.getElementById('titleHeader').classList.remove('titleEfect')
+	}
+	return so
+}
+
+console.log(retornarSO());
