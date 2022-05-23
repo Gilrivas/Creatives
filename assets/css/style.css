@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url(../fonts/GothamMedium.ttf);
+    src: url(../fonts/GothamMedium.otf);
 }
 
 @font-face {
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'Myriad';
-    src: url(../fonts/MYRIADPRO-REGULAR.OTF);
+    src: url(../fonts/MYRIADPRO-REGULAR.otf);
 }
 
 *{
