@@ -801,222 +801,8 @@ footer{
        
 }  
 
-    @media screen and (max-width: 768px){
+   
 
-        #premierepartie{
-            flex-direction: column;
-        }
-        #deuxiemepartie{
-            flex-direction: column-reverse;
-        }
-            .text1{
-                font-size: 0.8em;
-                width: 100%;
-            }
-            .photo1{
-                width: 100%;
-                height: auto;
-            }
-            .text2{
-                font-size: 0.8em;
-                width: 100%;
-            }
-            .photo2{
-                width: 100%;
-                height: auto;
-                
-            }
-
-        #basdepage{
-           flex-direction: column;
-           margin: 0%;
-       }
-       .txtSection3 > p{
-           font-size:15px ;
-           margin: 5%;
-       }
-       .txtSection3{
-           margin: 2%;
-       }
-       .txtSection3 > img{
-           margin: 30px;
-           width: 8%;
-       }
-
-
-    }
-
-@media screen and (max-width: 425px){
-
-        #premierepartie{
-            flex-direction: column;
-        }
-        .text1{ 
-            font-size: 0.8em;
-            width: 100%;
-        
-        }
-        .photo1{
-            width: 100%;
-            height: 100%;
-        }
-        .photo2{
-            width: 100%;
-            height: 100% ;  
-        }
-
-        #deuxiemepartie{
-            flex-direction: column-reverse;
-        }
-        .text2{
-            font-size: 1em;
-            width: 100%;
-        }
-        .premierepartie{
-            width: 3%;
-        }
-        .txtSection3 > p {
-            font-size: 0.9em;
-            line-height: 11px;
-            font-size: 70%;     
-        }
-        .txtSection3 > img {
-            width: 10%;
-            height: 10%;  
-        }
-        .bloc1{
-            font-size: 1.5em;
-        }
-        .bloc2{
-            font-size: 8em;
-        }
-        .bloc3{
-            font-size: 0.9em;
-        }
-        .summer{
-            flex-direction: column;
-        }
-        .summer > .boxSummer {
-            width: 70%;
-        }
-        .boxSummer > p {
-            text-align: justify;
-        }
-        
-        .txtSection3 > p{
-            font-size: 13px;
-            line-height: 17px;
-        }
-        .txtSection3 > img{
-            margin: 5px;
-}
-                /* Image ronde */
-        .boxSummer > img {
-             width: 200px; /* largeur de l'image */
-             height: auto; /* hauteur de l'image */
-             -webkit-transition: .3s ease-in-out !important; 
-             transition: .3s ease-in-out !important; 
-}
-        .boxSummer:hover img:hover {
-             width: 150px; /* on affiche l'image au carré */
-             height: 150px;
-             border-radius: 50%; 
-}
-
-
-                                
-
-}
-
-
-
-@media screen and (max-width: 375px){
-
-    .bloc3 > h3 {
-        font-size: 1.1em;
-        font-weight: bolder;
-    }
-}
-
-
-@media screen and (max-width: 320px){
-    
-            .bloc3 > h3 {
-                font-size: 0.9em;
-                font-weight: bolder;
-            }
-            .text1{ 
-                font-size: 0.7em;
-                width: 100%;
-            }
-            .text2{
-                font-size: 0.7em;
-                width: 100%;
-            }
-            .photo1{
-                width: 100%;
-                height: 100%;
-            }
-            .photo2{
-                width: 100%;
-                height: 100% ;  
-            }
-            .txt1{
-                min-height: 17vh;
-            }
-            .boxSummer > p{
-                font-size: 0.8em;
-                width: 100%;
-                text-align: justify;
-            }
-            .boxSummer > img{
-                width: 100%;
-                height: 100%;
-            }
-                       /* Image ronde */
-            .boxSummer > img {
-                width: 200px; /* largeur de l'image */
-                height: auto; /* hauteur de l'image */
-                -webkit-transition: .3s ease-in-out !important; 
-                transition: .3s ease-in-out !important; 
-                            }
-            .boxSummer:hover img:hover {
-                width: 150px; /* on affiche l'image au carré */
-                height: 150px;
-                border-radius: 50%; 
-                }
-            .txtSection3 > .basdepage > p{
-                font-size: 0.8em;
-                width: 50%;
-                height: 50%;
-                
-            }
-            #basdepage{
-               flex-direction: column;
-               text-align: center;
-               margin: 0%;
-            }
-
-            .txtSection3{
-                margin: 2%;
-                flex-direction: column;
-                width: 100%;
-            }
-            .txtSection3 > p{
-                margin: 0;
-                width: 90%;
-                text-align: justify;
-            }
-            .txtSection3 > img {
-                margin: 2%;
-                width: 16%;
-                height: 30%;
-                
-            }
-
-
-                 
-}
 
 @media screen and (max-width: 1024px) {
 
@@ -1069,6 +855,52 @@ footer{
     .boxFeatures > i{
         margin-bottom: 15px;
     }
+}
+
+
+@media screen and (max-width: 768px){
+
+    #premierepartie{
+        flex-direction: column;
+    }
+    #deuxiemepartie{
+        flex-direction: column-reverse;
+    }
+        .text1{
+            font-size: 0.8em;
+            width: 100%;
+        }
+        .photo1{
+            width: 100%;
+            height: auto;
+        }
+        .text2{
+            font-size: 0.8em;
+            width: 100%;
+        }
+        .photo2{
+            width: 100%;
+            height: auto;
+            
+        }
+
+    #basdepage{
+       flex-direction: column;
+       margin: 0%;
+   }
+   .txtSection3 > p{
+       font-size:15px ;
+       margin: 5%;
+   }
+   .txtSection3{
+       margin: 2%;
+   }
+   .txtSection3 > img{
+       margin: 30px;
+       width: 8%;
+   }
+
+
 }
 
 
@@ -1168,6 +1000,84 @@ footer{
        ;
     }
 
+    #premierepartie{
+        flex-direction: column;
+    }
+    .text1{ 
+        font-size: 0.8em;
+        width: 100%;
+    
+    }
+    .photo1{
+        width: 100%;
+        height: 100%;
+    }
+    .photo2{
+        width: 100%;
+        height: 100% ;  
+    }
+
+    #deuxiemepartie{
+        flex-direction: column-reverse;
+    }
+    .text2{
+        font-size: 1em;
+        width: 100%;
+    }
+    .premierepartie{
+        width: 3%;
+    }
+    .txtSection3 > p {
+        font-size: 0.9em;
+        line-height: 11px;
+        font-size: 70%;     
+    }
+    .txtSection3 > img {
+        width: 10%;
+        height: 10%;  
+    }
+    .bloc1{
+        font-size: 1.5em;
+    }
+    .bloc2{
+        font-size: 8em;
+    }
+    .bloc3{
+        font-size: 0.9em;
+    }
+    .summer{
+        flex-direction: column;
+    }
+    .summer > .boxSummer {
+        width: 70%;
+        margin: 40px;
+    }
+    .boxSummer > p {
+        text-align: justify;
+    }
+    
+    .txtSection3 > p{
+        font-size: 13px;
+        line-height: 17px;
+    }
+    .txtSection3 > img{
+        margin: 5px;
+}
+            /* Image ronde */
+    .boxSummer > img {
+         width: 200px; /* largeur de l'image */
+         height: auto; /* hauteur de l'image */
+         -webkit-transition: .3s ease-in-out !important; 
+         transition: .3s ease-in-out !important; 
+}
+    .boxSummer:hover img:hover {
+         width: 150px; /* on affiche l'image au carré */
+         height: 150px;
+         border-radius: 50%; 
+}
+
+
+
     
 }
 
@@ -1199,5 +1109,89 @@ footer{
     font-size: 0.8em;
 }
 
+.bloc3 > h3 {
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+}
+
+@media screen and (max-width: 320px){
+    
+    .bloc3 > h3 {
+        font-size: 0.9em;
+        font-weight: bolder;
+    }
+    .text1{ 
+        font-size: 0.7em;
+        width: 100%;
+    }
+    .text2{
+        font-size: 0.7em;
+        width: 100%;
+    }
+    .photo1{
+        width: 100%;
+        height: 100%;
+    }
+    .photo2{
+        width: 100%;
+        height: 100% ;  
+    }
+    .txt1{
+        min-height: 17vh;
+    }
+    .boxSummer > p{
+        font-size: 0.8em;
+        width: 100%;
+        text-align: justify;
+    }
+    .boxSummer > img{
+        width: 100%;
+        height: 100%;
+    }
+               /* Image ronde */
+    .boxSummer > img {
+        width: 200px; /* largeur de l'image */
+        height: auto; /* hauteur de l'image */
+        -webkit-transition: .3s ease-in-out !important; 
+        transition: .3s ease-in-out !important; 
+                    }
+    .boxSummer:hover img:hover {
+        width: 150px; /* on affiche l'image au carré */
+        height: 150px;
+        border-radius: 50%; 
+        }
+    .txtSection3 > .basdepage > p{
+        font-size: 0.8em;
+        width: 50%;
+        height: 50%;
+        
+    }
+    #basdepage{
+       flex-direction: column;
+       text-align: center;
+       margin: 0%;
+    }
+
+    .txtSection3{
+        margin: 2%;
+        flex-direction: column;
+        width: 100%;
+    }
+    .txtSection3 > p{
+        margin: 0;
+        width: 90%;
+        text-align: justify;
+    }
+    .txtSection3 > img {
+        margin: 2%;
+        width: 16%;
+        height: 30%;
+        
+    }
+
+
+         
 }
 
