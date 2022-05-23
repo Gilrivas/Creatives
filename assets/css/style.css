@@ -594,7 +594,7 @@ width: 100%;
 #modal01{
     width:350px;
     height:70vh;
-    top: calc(50% - 300px);
+    top: calc(50% - 30%);
     background: #fff;
     border-radius:5%;
     justify-content: center;
@@ -1125,6 +1125,22 @@ footer{
         width: 300px;
     }
 
+    .boxModalSummer > h3{
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .boxModalSummer > p{
+        font-size: 0.9em;
+    }
+
+    .txt1{
+        min-height: 20vh;
+    }
+    
+
+
+
     
 }
 
@@ -1161,5 +1177,27 @@ footer{
     top: -60px;
 
 }
+
+#modal01{
+    height: 500px;
+}
+
+#topclose{
+    padding: 0;
+}
+
+.boxModalSummer > img{
+    width: 200px;
+    height: 200px;
+}
+
+.boxModalSummer > h3{
+    font-size: 0.9em;
+}
+
+.boxModalSummer > p{
+    font-size: 0.8em;
+}
+
 }
 
